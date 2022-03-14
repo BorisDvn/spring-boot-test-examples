@@ -1,6 +1,7 @@
 package com.arhohuttunen;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -8,7 +9,11 @@ import javax.persistence.EntityNotFoundException;
 @Service
 @RequiredArgsConstructor
 public class OrderService {
+
+    //@Autowired
     private final OrderRepository orderRepository;
+
+    //@Autowired
     private final PaymentRepository paymentRepository;
 
     public Payment pay(Long orderId, String creditCardNumber) {
